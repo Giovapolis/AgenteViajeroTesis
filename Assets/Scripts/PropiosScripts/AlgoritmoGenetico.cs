@@ -143,7 +143,7 @@ public class AlgoritmoGenetico : MonoBehaviour
             //Cruza
             Debug.Log(poblacion[0].mostrarRecorrido());
             Debug.Log(poblacion[1].mostrarRecorrido());
-            List<Cromosoma> hijos = CruzaPMX(poblacion[0], poblacion[1]);
+            List<Cromosoma> hijos = Cruza(poblacion[0], poblacion[1]);
             Debug.Log(hijos[0].mostrarRecorrido());
             Debug.Log(hijos[1].mostrarRecorrido());
             //Mutacion
@@ -175,9 +175,12 @@ public class AlgoritmoGenetico : MonoBehaviour
     }
 
     //Cruza por orden (OX)
-    public List<Cromosoma> CruzaPMX(Cromosoma padre, Cromosoma madre)
+    public List<Cromosoma> Cruza(Cromosoma padre, Cromosoma madre)
     {
         List<Cromosoma> hijos = new List<Cromosoma>();
+
+        uint[] r1 = new uint[padre.Recorrido.Count];
+        uint[] r2 = new uint[padre.Recorrido.Count];
 
         int p1, p2;
 
@@ -187,67 +190,46 @@ public class AlgoritmoGenetico : MonoBehaviour
             p2 = UnityEngine.Random.Range(1, padre.Recorrido.Count);
         } while ((p1 == p2) || (p1 == 0 && p2 == padre.Recorrido.Count) || (p1 > p2));
 
-        Debug.Log(p1 + " - " + p2);
-
-        uint[] h1 = new uint[padre.Recorrido.Count];
-        uint[] h2 = new uint[padre.Recorrido.Count];
-
         for (int i = p1; i < p2; i++)
         {
-            h1[i] = madre.Recorrido[i];
-            h2[i] = padre.Recorrido[i];
+            r1[i] = madre.Recorrido[i];
+            r2[i] = padre.Recorrido[i];
         }
 
-        recorrido(p1, p2, h1, padre, madre);
-        recorrido(p1, p2, h2, madre, padre);
+        recorre(r1, padre, madre, p1, p2);
+        recorre(r2, madre, padre, p1, p2);
 
-        //Parallel.For(0, p1, (i) =>
-        //Parallel.For(p2+1, padre.Recorrido.Count, (j) =>
+        hijos.Add(new Cromosoma(r1.OfType<uint>().ToList()));
+        hijos.Add(new Cromosoma(r2.OfType<uint>().ToList()));
 
-        hijos.Add(new Cromosoma(h1.OfType<uint>().ToList()));
-        hijos.Add(new Cromosoma(h2.OfType<uint>().ToList()));
         return hijos;
     }
 
-    void recorrido(int p1, int p2, uint[] h, Cromosoma padre, Cromosoma madre)
+    void recorre(uint[] r,Cromosoma p,Cromosoma m,int p1,int p2)
     {
         for (int i = 0; i < p1; i++)
         {
-            if (h.Contains(padre.Recorrido[i]))
+            if (r.Contains(p.Recorrido[i]))
             {
-                //h[i] = padre.Recorrido[Array.IndexOf(madre.Recorrido.ToArray(), padre.Recorrido[i])]; ;
-                h[i] = recu(Array.IndexOf(madre.Recorrido.ToArray(), padre.Recorrido[i]), h, padre, madre);
+                r[i] = m.Recorrido[i];
             }
             else
             {
-                h[i] = padre.Recorrido[i];
+                r[i] = p.Recorrido[i];
             }
-        };
+        }
 
-        for (int j = p2; j < padre.Recorrido.Count; j++)
+        for (int i = p2; i < p.Recorrido.Count; i++)
         {
-            if (h.Contains(padre.Recorrido[j]))
+            if (r.Contains(p.Recorrido[i]))
             {
-                //h[j] = padre.Recorrido[Array.IndexOf(madre.Recorrido.ToArray(), padre.Recorrido[j])];
-                h[j] = recu(Array.IndexOf(madre.Recorrido.ToArray(), padre.Recorrido[j]), h, padre, madre);
+                r[i] = m.Recorrido[i];
             }
             else
             {
-                h[j] = padre.Recorrido[j];
+                r[i] = p.Recorrido[i];
             }
-        };
-    }
-
-    public uint recu(int idx,uint[] h,Cromosoma padre,Cromosoma madre) {
-
-        if (h.Contains(padre.Recorrido[idx]))
-        {
-            return recu((int)padre.Recorrido[Array.IndexOf(madre.Recorrido.ToArray(), padre.Recorrido[idx])], h, padre, madre);
-        }
-        else{
-            return padre.Recorrido[idx];
         }
     }
-
 
 }
