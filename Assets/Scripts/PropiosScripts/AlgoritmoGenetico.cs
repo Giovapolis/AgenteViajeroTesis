@@ -86,14 +86,14 @@ public class AlgoritmoGenetico : MonoBehaviour
 
         for (int i = 0; i < cantidadDeCromosomas; i++)
         {
-            List<uint> numeros = new List<uint>();
+            List<int> numeros = new List<int>();
 
             for (int j = 0; j < cantidadDeCiudades; j++)
             {
-                uint num = (uint)UnityEngine.Random.Range(0, cantidadDeCiudades);
+                int num = (int)UnityEngine.Random.Range(0, cantidadDeCiudades);
                 do
                 {
-                    num = (uint)UnityEngine.Random.Range(0, cantidadDeCiudades);
+                    num = (int)UnityEngine.Random.Range(0, cantidadDeCiudades);
                 } while (numeros.Contains(num));
                 numeros.Add(num);
             }
@@ -179,8 +179,8 @@ public class AlgoritmoGenetico : MonoBehaviour
     {
         List<Cromosoma> hijos = new List<Cromosoma>();
 
-        uint[] r1 = new uint[padre.Recorrido.Count];
-        uint[] r2 = new uint[padre.Recorrido.Count];
+        int[] r1 = new int[padre.Recorrido.Count];
+        int[] r2 = new int[padre.Recorrido.Count];
 
         int p1, p2;
 
@@ -199,13 +199,13 @@ public class AlgoritmoGenetico : MonoBehaviour
         recorre(r1, padre, madre, p1, p2);
         recorre(r2, madre, padre, p1, p2);
 
-        hijos.Add(new Cromosoma(r1.OfType<uint>().ToList()));
-        hijos.Add(new Cromosoma(r2.OfType<uint>().ToList()));
+        hijos.Add(new Cromosoma(r1.OfType<int>().ToList()));
+        hijos.Add(new Cromosoma(r2.OfType<int>().ToList()));
 
         return hijos;
     }
 
-    void recorre(uint[] r,Cromosoma p,Cromosoma m,int p1,int p2)
+    void recorre(int[] r,Cromosoma p,Cromosoma m,int p1,int p2)
     {
         for (int i = 0; i < p1; i++)
         {

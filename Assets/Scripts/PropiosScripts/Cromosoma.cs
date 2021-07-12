@@ -7,18 +7,18 @@ using System;
 public class Cromosoma : MonoBehaviour
 {
     //Atributos
-    private List<uint> recorrido;
+    private List<int> recorrido;
     private double aptitud;
 
     //Random
     private System.Random rnd = new System.Random();
 
-    public Cromosoma(List<uint> recorrido)
+    public Cromosoma(List<int> recorrido)
     {
         this.recorrido = recorrido;
     }
 
-    public List<uint> Recorrido { get => recorrido; set => recorrido = value; }
+    public List<int> Recorrido { get => recorrido; set => recorrido = value; }
     public double Aptitud { get => aptitud; set => aptitud = value; }
 
     public string mostrarRecorrido()
@@ -43,7 +43,7 @@ public class Cromosoma : MonoBehaviour
             {
                 int pos1 = rnd.Next(Recorrido.Count);
                 int pos2 = rnd.Next(Recorrido.Count);
-                uint tmp = Recorrido[pos1];
+                int tmp = Recorrido[pos1];
                 Recorrido[pos1] = Recorrido[pos2];
                 Recorrido[pos2] = tmp;
             });
@@ -52,7 +52,7 @@ public class Cromosoma : MonoBehaviour
         {
             int pos1 = UnityEngine.Random.Range(0, recorrido.Count);
             int pos2 = UnityEngine.Random.Range(0, recorrido.Count);
-            uint tmp = Recorrido[pos1];
+            int tmp = Recorrido[pos1];
             Recorrido[pos1] = Recorrido[pos2];
             Recorrido[pos2] = tmp;
         }
