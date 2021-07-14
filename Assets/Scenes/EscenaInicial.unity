@@ -494,7 +494,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1562953755}
-        m_MethodName: cambioEscena
+        m_MethodName: GoToScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -702,7 +702,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1562953755}
-        m_MethodName: cambioEscena
+        m_MethodName: GoToScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1181,6 +1181,7 @@ GameObject:
   - component: {fileID: 1222520396}
   - component: {fileID: 1222520395}
   - component: {fileID: 1222520394}
+  - component: {fileID: 1222520398}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1278,6 +1279,20 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1222520398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222520392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ace7d5701423048945894bb323971a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fade: 1
+  f: 0
 --- !u!1001 &1409033763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1465,7 +1480,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1562953754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cfbd9c289cbb6e4fb7ae65b2a0d4df4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e49cecdab306534cb249c1de47d38ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1562953756

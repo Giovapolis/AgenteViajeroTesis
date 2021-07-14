@@ -283,7 +283,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 459541372}
-        m_MethodName: cambioEscena
+        m_MethodName: GoToScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -623,7 +623,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 459541371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cfbd9c289cbb6e4fb7ae65b2a0d4df4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e49cecdab306534cb249c1de47d38ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &459541373
@@ -740,6 +740,7 @@ GameObject:
   - component: {fileID: 540871892}
   - component: {fileID: 540871891}
   - component: {fileID: 540871890}
+  - component: {fileID: 540871894}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -837,6 +838,20 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &540871894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540871888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ace7d5701423048945894bb323971a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fade: 1
+  f: 0
 --- !u!1 &561762419
 GameObject:
   m_ObjectHideFlags: 0
