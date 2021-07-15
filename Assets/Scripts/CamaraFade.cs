@@ -33,7 +33,7 @@ public class CamaraFade : MonoBehaviour
 
     private void Update()
     {
-        f = Mathf.Lerp(f, fade, Time.deltaTime * 5);
+        f = Mathf.Lerp(f, fade, Time.deltaTime * 10);
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
