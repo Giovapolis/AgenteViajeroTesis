@@ -1,0 +1,26 @@
+digraph FlujoGeneticSharp {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=lightgreen];
+
+    Inicio [label="Inicio\n(GAController.iniciarAG())"];
+    InitPop [label="Inicialización de Población\n(TspChromosome, Population)"];
+    EvalFitness [label="Evaluación de Fitness\n(TspFitness.Evaluate)"];
+    Selection [label="Selección\n(RouletteWheelSelection)"];
+    Crossover [label="Cruce\n(OrderedCrossover)"];
+    Mutation [label="Mutación\n(ReverseSequenceMutation)"];
+    NewGen [label="Nueva Generación\n(Reemplazo poblacional)"];
+    CheckStop [label="¿Condición de Parada?\n(GenerationNumberTermination)", shape=diamond];
+    UpdateVis [label="Actualizar Visualización\n(DrawRouteGenetic)"];
+    Fin [label="Fin"];
+
+    Inicio -> InitPop;
+    InitPop -> EvalFitness;
+    EvalFitness -> Selection;
+    Selection -> Crossover;
+    Crossover -> Mutation;
+    Mutation -> NewGen;
+    NewGen -> CheckStop;
+    CheckStop -> EvalFitness [label="No"];
+    CheckStop -> UpdateVis [label="Sí"];
+    UpdateVis -> Fin;
+}

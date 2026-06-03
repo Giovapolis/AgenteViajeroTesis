@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\begin{document}
+\begin{tikzpicture}[node distance=2cm]
+    % Definir nodos del flujo
+    \node (start) [draw, ellipse, fill=green!20] {Inicio};
+    \node (cities) [draw, rectangle, fill=blue!20, below=of start] {Generación de Ciudades};
+    \node (population) [draw, rectangle, fill=blue!20, below=of cities] {Creación de Población Inicial};
+    \node (fitness) [draw, rectangle, fill=yellow!20, below=of population] {Evaluación de Fitness};
+    \node (selection) [draw, rectangle, fill=orange!20, below=of fitness] {Selección};
+    \node (crossover) [draw, rectangle, fill=orange!20, below=of selection] {Cruza};
+    \node (mutation) [draw, rectangle, fill=red!20, below=of crossover] {Mutación};
+    \node (newpop) [draw, rectangle, fill=red!20, below=of mutation] {Generación de Nueva Población};
+    \node (check) [draw, diamond, fill=purple!20, below=of newpop] {¿Máx Generaciones?};
+    \node (visual) [draw, rectangle, fill=green!20, right=of check] {Visualización de Resultados};
+    \node (end) [draw, ellipse, fill=red!20, below=of check] {Fin};
+
+    % Dibujar flechas del flujo
+    \draw[->] (start) -- (cities);
+    \draw[->] (cities) -- (population);
+    \draw[->] (population) -- (fitness);
+    \draw[->] (fitness) -- (selection);
+    \draw[->] (selection) -- (crossover);
+    \draw[->] (crossover) -- (mutation);
+    \draw[->] (mutation) -- (newpop);
+    \draw[->] (newpop) -- (check);
+    \draw[->] (check) -- node[above] {No} (fitness);
+    \draw[->] (check) -- node[right] {Sí} (visual);
+    \draw[->] (visual) -- (end);
+\end{tikzpicture}
+\end{document}

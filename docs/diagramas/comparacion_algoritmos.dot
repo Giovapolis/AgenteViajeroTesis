@@ -1,0 +1,28 @@
+digraph ComparacionAlgoritmos {
+    rankdir=LR;
+    node [shape=box, style=filled];
+
+    subgraph clusterGeneticSharp {
+        label="GeneticSharp";
+        color=blue;
+        GS1 [label="Biblioteca externa\n(Componentes reutilizables)", fillcolor=lightblue];
+        GS2 [label="Rápida implementación\n(Menos código propio)", fillcolor=lightblue];
+        GS3 [label="Operadores predefinidos\n(Menos control fino)", fillcolor=lightblue];
+        GS4 [label="Integración automática\n(GAController)", fillcolor=lightblue];
+    }
+
+    subgraph clusterPropio {
+        label="Implementación Propia";
+        color=red;
+        P1 [label="Código desarrollado\n(Control total)", fillcolor=lightcoral];
+        P2 [label="Más código\n(Mayor complejidad)", fillcolor=lightcoral];
+        P3 [label="Operadores customizables\n(Máxima flexibilidad)", fillcolor=lightcoral];
+        P4 [label="Integración manual\n(AlgoritmoGenetico)", fillcolor=lightcoral];
+    }
+
+    // Conexiones para destacar diferencias
+    GS1 -> P1 [label="vs", style=dashed];
+    GS2 -> P2 [label="vs", style=dashed];
+    GS3 -> P3 [label="vs", style=dashed];
+    GS4 -> P4 [label="vs", style=dashed];
+}

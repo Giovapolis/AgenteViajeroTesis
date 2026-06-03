@@ -1,0 +1,49 @@
+digraph ArquitecturaProyecto {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=lightblue];
+
+    // Carpetas principales
+    Assets [label="Assets\n(Carpeta raíz de recursos)"];
+    Scripts [label="Scripts\n(Código C#)"];
+    Prefabs [label="Prefabs\n(Plantillas de objetos)"];
+    Scenes [label="Scenes\n(Escenas de Unity)"];
+    Plugins [label="Plugins\n(Bibliotecas externas)"];
+    Resources [label="Resources\n(Recursos dinámicos)"];
+
+    // Subcarpetas de Scripts
+    Propio [label="Propio\n(AG implementado manualmente)"];
+    Genetic [label="Genetic\n(AG con GeneticSharp)"];
+    Utils [label="Utils\n(Utilidades generales)"];
+
+    // Módulos principales
+    AlgoritmoGenetico [label="AlgoritmoGenetico.cs\n(Núcleo AG propio)"];
+    GAController [label="GAController.cs\n(Núcleo AG GeneticSharp)"];
+    ControlAGPropio [label="ControlAGPropio.cs\n(Interfaz AG propio)"];
+    Ciudad [label="Ciudad.cs\n(Modelo de ciudad)"];
+    Cromosoma [label="Cromosoma.cs\n(Modelo de individuo)"];
+    TspFitness [label="TspFitness.cs\n(Evaluación GeneticSharp)"];
+    Visualizacion [label="Sistema de Visualización\n(LineRenderer, Prefabs)"];
+
+    // Relaciones
+    Assets -> Scripts;
+    Assets -> Prefabs;
+    Assets -> Scenes;
+    Assets -> Plugins;
+    Assets -> Resources;
+
+    Scripts -> Propio;
+    Scripts -> Genetic;
+    Scripts -> Utils;
+
+    Propio -> AlgoritmoGenetico;
+    Propio -> ControlAGPropio;
+    Propio -> Ciudad;
+    Propio -> Cromosoma;
+
+    Genetic -> GAController;
+    Genetic -> TspFitness;
+
+    AlgoritmoGenetico -> Visualizacion [label="Actualiza"];
+    GAController -> Visualizacion [label="Actualiza"];
+    ControlAGPropio -> AlgoritmoGenetico [label="Configura"];
+}

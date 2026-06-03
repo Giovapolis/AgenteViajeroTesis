@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\begin{document}
+\begin{tikzpicture}[node distance=2cm]
+    % Definir nodos del flujo de ejecución
+    \node (start) [draw, ellipse, fill=green!20] {Inicio de la Aplicación};
+    \node (config) [draw, rectangle, fill=blue!20, below=of start] {Configuración de Parámetros};
+    \node (gencities) [draw, rectangle, fill=blue!20, below=of config] {Generación de Ciudades};
+    \node (runag) [draw, rectangle, fill=yellow!20, below=of gencities] {Ejecución del Algoritmo Genético};
+    \node (evolution) [draw, rectangle, fill=orange!20, below=of runag] {Evolución de Generaciones};
+    \node (updatevis) [draw, rectangle, fill=red!20, below=of evolution] {Actualización de Visualización};
+    \node (bestruta) [draw, rectangle, fill=purple!20, below=of updatevis] {Obtención de la Mejor Ruta};
+
+    % Dibujar flechas del flujo
+    \draw[->] (start) -- (config);
+    \draw[->] (config) -- (gencities);
+    \draw[->] (gencities) -- (runag);
+    \draw[->] (runag) -- (evolution);
+    \draw[->] (evolution) -- (updatevis);
+    \draw[->] (updatevis) -- (bestruta);
+\end{tikzpicture}
+\end{document}

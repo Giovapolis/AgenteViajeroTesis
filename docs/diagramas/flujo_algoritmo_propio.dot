@@ -1,0 +1,28 @@
+digraph FlujoAlgoritmoPropio {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=lightyellow];
+
+    Inicio [label="Inicio\n(AlgoritmoGenetico.inicia())"];
+    GenPop [label="Generación de Población\n(makePopulation)"];
+    GenCities [label="Generación de Ciudades\n(makeCities)"];
+    EvalPop [label="Evaluación de Población\n(evaluatePopulation)"];
+    Selection [label="Selección\n(seleccionar - Ruleta/Torneo/Ranking)"];
+    Crossover [label="Cruce\n(reproducir - PMX/OX/CX)"];
+    Mutation [label="Mutación\n(mutar - Inserción/Intercambio/Inversión)"];
+    Replace [label="Reemplazo Generacional\n(reemplazarPoblacion - Elitismo)"];
+    CheckGen [label="¿Generación < Máx?\n(GeneracionActual < Generaciones)", shape=diamond];
+    UpdateVis [label="Actualizar Visualización\n(drawRoute)"];
+    Fin [label="Fin"];
+
+    Inicio -> GenPop;
+    GenPop -> GenCities;
+    GenCities -> EvalPop;
+    EvalPop -> Selection;
+    Selection -> Crossover;
+    Crossover -> Mutation;
+    Mutation -> Replace;
+    Replace -> CheckGen;
+    CheckGen -> EvalPop [label="Sí"];
+    CheckGen -> UpdateVis [label="No"];
+    UpdateVis -> Fin;
+}
