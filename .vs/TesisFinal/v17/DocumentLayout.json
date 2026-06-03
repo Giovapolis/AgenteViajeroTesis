@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Users\\giovo\\Documents\\Proyectos\\ProjectsUnity\\TesisFinal\\",
+  "WorkspaceRootPath": "C:\\Users\\Giovapolis\\Documents\\TesisFinal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{59017E42-9A0A-9F03-7720-0B9E46095350}|Assembly-CSharp.csproj|d:\\users\\giovo\\documents\\proyectos\\projectsunity\\tesisfinal\\assets\\scripts\\gamepadbuttonaclick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59017E42-9A0A-9F03-7720-0B9E46095350}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamepadbuttonaclick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{59017E42-9A0A-9F03-7720-0B9E46095350}|Assembly-CSharp.csproj|c:\\users\\giovapolis\\documents\\tesisfinal\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{59017E42-9A0A-9F03-7720-0B9E46095350}|Assembly-CSharp.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\users\\giovo\\documents\\proyectos\\projectsunity\\tesisfinal\\assets\\scripts\\interaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\interaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{59017E42-9A0A-9F03-7720-0B9E46095350}|Assembly-CSharp.csproj|c:\\users\\giovapolis\\documents\\tesisfinal\\detalles.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{59017E42-9A0A-9F03-7720-0B9E46095350}|Assembly-CSharp.csproj|solutionrelative:detalles.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59017E42-9A0A-9F03-7720-0B9E46095350}|Assembly-CSharp.csproj|c:\\users\\giovapolis\\documents\\tesisfinal\\assets\\scripts\\propio\\algoritmogenetico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59017E42-9A0A-9F03-7720-0B9E46095350}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\propio\\algoritmogenetico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GamepadButtonAClick.cs",
-              "DocumentMoniker": "D:\\Users\\giovo\\Documents\\Proyectos\\ProjectsUnity\\TesisFinal\\Assets\\Scripts\\GamepadButtonAClick.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GamepadButtonAClick.cs",
-              "ToolTip": "D:\\Users\\giovo\\Documents\\Proyectos\\ProjectsUnity\\TesisFinal\\Assets\\Scripts\\GamepadButtonAClick.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GamepadButtonAClick.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T23:18:45.484Z",
+              "DocumentIndex": 1,
+              "Title": "Detalles.md",
+              "DocumentMoniker": "C:\\Users\\Giovapolis\\Documents\\TesisFinal\\Detalles.md",
+              "RelativeDocumentMoniker": "Detalles.md",
+              "ToolTip": "C:\\Users\\Giovapolis\\Documents\\TesisFinal\\Detalles.md",
+              "RelativeToolTip": "Detalles.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-06-03T20:46:27.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Interaccion.cs",
-              "DocumentMoniker": "D:\\Users\\giovo\\Documents\\Proyectos\\ProjectsUnity\\TesisFinal\\Assets\\Scripts\\Interaccion.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Interaccion.cs",
-              "ToolTip": "D:\\Users\\giovo\\Documents\\Proyectos\\ProjectsUnity\\TesisFinal\\Assets\\Scripts\\Interaccion.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Interaccion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\Giovapolis\\Documents\\TesisFinal\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\Giovapolis\\Documents\\TesisFinal\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAHsAAAAAAAAAAAASwIgAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-06-03T20:35:21.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AlgoritmoGenetico.cs",
+              "DocumentMoniker": "C:\\Users\\Giovapolis\\Documents\\TesisFinal\\Assets\\Scripts\\Propio\\AlgoritmoGenetico.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Propio\\AlgoritmoGenetico.cs",
+              "ToolTip": "C:\\Users\\Giovapolis\\Documents\\TesisFinal\\Assets\\Scripts\\Propio\\AlgoritmoGenetico.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Propio\\AlgoritmoGenetico.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T22:57:56.975Z"
+              "WhenOpened": "2026-06-03T20:31:45.329Z",
+              "EditorCaption": ""
             }
           ]
         }

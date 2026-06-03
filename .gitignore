@@ -6,6 +6,9 @@
 [Ll]ogs/
 UserSettings/
 MemoryCaptures/
+
+.vs/
+
 *.csproj
 *.unityproj
 *.sln
